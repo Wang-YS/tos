@@ -1,7 +1,10 @@
+DEST=/usr/local/bin/tos
+
 install:
-	echo "wait"
+	mkdir -p $(dir $(DEST))
+	cp ./tos.sh $(DEST)
 
 unstall:
-	echo "wait"
+	rm -f $(DEST)
 
 .PHONY: install unstall
